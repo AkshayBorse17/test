@@ -1,6 +1,6 @@
 pipeline{
     agent{
-        label 'custom'
+        label 'prod'
     }
     
     stages{
@@ -9,7 +9,7 @@ pipeline{
             sh 'pwd'
             //sh 'cd /home/ubuntu/new && pwd'
             dir("/home/ubuntu/new"){
-            git branch: 'develop', url: 'https://github.com/akshayborse007/test.git'
+            git branch: 'main', url: 'https://github.com/akshayborse007/test.git'
             
             }    
             }
